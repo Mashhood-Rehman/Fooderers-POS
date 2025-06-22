@@ -1,3 +1,4 @@
+import { Images } from "../assets/Images";
 
 export const popularDishes = [
     {
@@ -234,5 +235,161 @@ export const soups = [
         name: "Lemon Coriander Soup",
         price: 110,
         category: "Vegetarian"
+    }
+];
+
+
+
+export const ordersData = [
+    // All
+    {
+        category: "All",
+        image: Images.logo,
+        customerName: "John Doe",
+        tableNo: 1,
+        date: "2025-06-22",
+        price: 2500,
+        items: 3
+    },
+    {
+        category: "All",
+        image: Images.logo,
+        customerName: "Alice Smith",
+        tableNo: 2,
+        date: "2025-06-21",
+        price: 1800,
+        items: 2
+    },
+    {
+        category: "All",
+        image: Images.logo,
+        customerName: "Mohammad Rizwan",
+        tableNo: 5,
+        date: "2025-06-20",
+        price: 3100,
+        items: 4
+    },
+    {
+        category: "All",
+        image: Images.logo,
+        customerName: "Emma Johnson",
+        tableNo: 3,
+        date: "2025-06-22",
+        price: 1450,
+        items: 1
+    },
+
+    // Ready
+    {
+        category: "Ready",
+        image: Images.logo,
+        customerName: "David Warner",
+        tableNo: 6,
+        date: "2025-06-22",
+        price: 2750,
+        items: 3
+    },
+    {
+        category: "Ready",
+        image: Images.logo,
+        customerName: "Sara Lee",
+        tableNo: 7,
+        date: "2025-06-22",
+        price: 1600,
+        items: 2
+    },
+    {
+        category: "Ready",
+        image: Images.logo,
+        customerName: "Imran Ali",
+        tableNo: 2,
+        date: "2025-06-21",
+        price: 1900,
+        items: 3
+    },
+    {
+        category: "Ready",
+        image: Images.logo,
+        customerName: "Fatima Noor",
+        tableNo: 1,
+        date: "2025-06-22",
+        price: 2200,
+        items: 4
+    },
+
+    // In Progress
+    {
+        category: "In Progress",
+        image: Images.logo,
+        customerName: "Liam Brown",
+        tableNo: 8,
+        date: "2025-06-22",
+        price: 3200,
+        items: 5
+    },
+    {
+        category: "In Progress",
+        image: Images.logo,
+        customerName: "Zara Khan",
+        tableNo: 4,
+        date: "2025-06-21",
+        price: 2050,
+        items: 3
+    },
+    {
+        category: "In Progress",
+        image: Images.logo,
+        customerName: "Noah Wilson",
+        tableNo: 9,
+        date: "2025-06-22",
+        price: 1500,
+        items: 2
+    },
+    {
+        category: "In Progress",
+        image: Images.logo,
+        customerName: "Aisha Ahmed",
+        tableNo: 5,
+        date: "2025-06-20",
+        price: 1850,
+        items: 2
+    },
+
+    // Completed
+    {
+        category: "Completed",
+        image: Images.logo,
+        customerName: "Muneeb Khan",
+        tableNo: 1,
+        date: "2025-06-20",
+        price: 3000,
+        items: 4
+    },
+    {
+        category: "Completed",
+        image: Images.logo,
+        customerName: "Sophia Malik",
+        tableNo: 6,
+        date: "2025-06-19",
+        price: 2100,
+        items: 3
+    },
+    {
+        category: "Completed",
+        image: Images.logo,
+        customerName: "Bilal Sheikh",
+        tableNo: 3,
+        date: "2025-06-19",
+        price: 1750,
+        items: 2
+    },
+    {
+        category: "Completed",
+        image: Images.logo,
+        customerName: "Olivia Grace",
+        tableNo: 2,
+        date: "2025-06-18",
+        price: 2600,
+        items: 3
     }
 ];

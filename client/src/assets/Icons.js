@@ -1,4 +1,4 @@
-import { Search, BellDot, CircleUserRound, House, ClockArrowUp, HandPlatter, CircleEllipsis, ConciergeBell, DollarSign, Ellipsis, CheckCheck, CircleCheckBig } from "lucide-react"
+import { Search, BellDot, CircleUserRound, House, ClockArrowUp, HandPlatter, CircleEllipsis, ConciergeBell, DollarSign, Ellipsis, CheckCheck, CircleCheckBig, ArrowLeft } from "lucide-react"
 export const Icons = {
     CircleEllipsis,
     HandPlatter,
@@ -11,5 +11,6 @@ export const Icons = {
     DollarSign,
     Ellipsis,
     CheckCheck,
-    CircleCheckBig
+    CircleCheckBig,
+    ArrowLeft
 }
