@@ -1,5 +1,5 @@
 
-import React from "react";
+import React, { useState } from "react";
 import BottomNav from "../components/shared/BottomNav";
 import Greetings from "../components/home/Greetings";
 import MinCard from "../components/home/MinCard";
