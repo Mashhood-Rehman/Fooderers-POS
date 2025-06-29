@@ -1,18 +1,26 @@
 import React from 'react';
 import { tables } from '../../constants/data';
+import { useNavigate } from 'react-router-dom';
 
 const TableCard = ({ activeTab }) => {
+    const navigate = useNavigate()
     const filteredData =
         activeTab === 'All'
             ? tables
             : tables.filter((table) => table.status === activeTab);
 
+
+
     return (
         <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-6 mt-8">
             {filteredData.map((table) => (
                 <div
+                    onClick={() => {
+                        if (table.status === "Booked") return
+                        navigate("/menu")
+                    }}
                     key={table.id}
-                    className="bg-[#2e2e2e] rounded-2xl p-5 shadow-md hover:shadow-lg transition-shadow duration-200"
+                    className="bg-[#2e2e2e] cursor-pointer rounded-2xl p-5 shadow-md hover:shadow-lg transition-shadow duration-200"
                 >
                     <div className='flex items-start justify-between'>
 

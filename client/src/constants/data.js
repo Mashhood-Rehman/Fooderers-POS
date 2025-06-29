@@ -393,3 +393,131 @@ export const ordersData = [
         items: 3
     }
 ];
+export const desserts = [
+    {
+        id: 1,
+        name: "Gulab Jamun",
+        price: 100,
+        category: "Vegetarian"
+    },
+    {
+        id: 2,
+        name: "Kulfi",
+        price: 150,
+        category: "Vegetarian"
+    },
+    {
+        id: 3,
+        name: "Chocolate Lava Cake",
+        price: 250,
+        category: "Vegetarian"
+    },
+    {
+        id: 4,
+        name: "Ras Malai",
+        price: 180,
+        category: "Vegetarian"
+    }
+];
+export const pizzas = [
+    {
+        id: 1,
+        name: "Margherita Pizza",
+        price: 350,
+        category: "Vegetarian"
+    },
+    {
+        id: 2,
+        name: "Veg Supreme Pizza",
+        price: 400,
+        category: "Vegetarian"
+    },
+    {
+        id: 3,
+        name: "Pepperoni Pizza",
+        price: 450,
+        category: "Non-Vegetarian"
+    }
+];
+
+export const alcoholicDrinks = [
+    {
+        id: 1,
+        name: "Beer",
+        price: 200,
+        category: "Alcoholic"
+    },
+    {
+        id: 2,
+        name: "Whiskey",
+        price: 500,
+        category: "Alcoholic"
+    },
+    {
+        id: 3,
+        name: "Vodka",
+        price: 450,
+        category: "Alcoholic"
+    },
+    {
+        id: 4,
+        name: "Rum",
+        price: 350,
+        category: "Alcoholic"
+    },
+    {
+        id: 5,
+        name: "Tequila",
+        price: 600,
+        category: "Alcoholic"
+    },
+    {
+        id: 6,
+        name: "Cocktail",
+        price: 400,
+        category: "Alcoholic"
+    }
+];
+export const salads = [
+    {
+        id: 1,
+        name: "Caesar Salad",
+        price: 200,
+        category: "Vegetarian"
+    },
+    {
+        id: 2,
+        name: "Greek Salad",
+        price: 250,
+        category: "Vegetarian"
+    },
+    {
+        id: 3,
+        name: "Fruit Salad",
+        price: 150,
+        category: "Vegetarian"
+    },
+    {
+        id: 4,
+        name: "Chicken Salad",
+        price: 300,
+        category: "Non-Vegetarian"
+    },
+    {
+        id: 5,
+        name: "Tuna Salad",
+        price: 350,
+
+    }
+];
+
+export const menus = [
+    { id: 1, name: "Starters", bgColor: "bg-[#b73e3e]", icon: "🍲", items: startersItem },
+    { id: 2, name: "Main Course", bgColor: "bg-[#5b45b0]", icon: "🍛", items: mainCourse },
+    { id: 3, name: "Beverages", bgColor: "bg-[#7f167f]", icon: "🍹", items: beverages },
+    { id: 4, name: "Soups", bgColor: "bg-[#735f32]", icon: "🍜", items: soups },
+    { id: 5, name: "Desserts", bgColor: "bg-[#1d2569]", icon: "🍰", items: desserts },
+    { id: 6, name: "Pizzas", bgColor: "bg-[#285430]", icon: "🍕", items: pizzas },
+    { id: 7, name: "Alcoholic Drinks", bgColor: "bg-[#b73e3e]", icon: "🍺", items: alcoholicDrinks },
+    { id: 8, name: "Salads", bgColor: "bg-[#5b45b0]", icon: "🥗", items: salads }
+]

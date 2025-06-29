@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 
 import { Icons } from "../../assets/Icons";
 import { Link } from "react-router-dom";
@@ -12,6 +12,19 @@ const BottomNav = () => {
 
     const increment = () => setGuestCount(prev => prev + 1);
     const decrement = () => setGuestCount(prev => (prev > 0 ? prev - 1 : 0));
+
+
+    useEffect(() => {
+        if (openModal) {
+            document.body.style.overflow = "hidden";
+        } else {
+            document.body.style.overflow = "auto";
+        }
+
+        return () => {
+            document.body.style.overflow = "auto";
+        };
+    }, [openModal]);
     return (
         <div className="fixed bottom-0 left-0 right-0 bg-[#262626] p-2 h-16 flex justify-around">
             <Link to="/" className="text-[#f5f5f5] bg-[#343434] flex items-center justify-center rounded-4xl w-full max-w-[200px]">
@@ -64,7 +77,10 @@ const BottomNav = () => {
                                 <Icons.Plus size={20} className="text-orange-500" />
                             </button>
                         </div>
-                        <button className="text-white bg-orange-500 w-full flex items-center justify-center mt-2 rounded-xl py-3">Create Order</button>
+                        <div className="flex items-center justify-center">
+
+                            <button className="text-white bg-orange-500 px-3  mt-4 rounded-xl py-2">Create Order</button>
+                        </div>
                     </div>
                 </div>
             </Modal>

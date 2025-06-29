@@ -30,7 +30,7 @@ const OrderCard = ({ activeTab }) => {
                         </div>
 
                         {/* Right: Status Tag */}
-                        <span className="text-xs bg-green-700 text-white px-2 py-1 rounded">
+                        <span className="text-sm  text-green-700 px-2 py-1 rounded">
                             Ready to serve
                         </span>
                     </div>

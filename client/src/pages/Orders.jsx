@@ -6,7 +6,7 @@ import BottomNav from "../components/shared/BottomNav";
 const Orders = () => {
     const [activeTab, setActiveTab] = useState("All")
     return (
-        <div className="bg-[#1a1a1a] text-white p-5   w-full">
+        <div className="bg-[#1a1a1a] text-white p-5    w-full">
 
             <div className="flex items-center justify-between ">
 
