@@ -28,13 +28,12 @@ const MenuContainer = () => {
         <>
             <div className="p-6">
 
-                <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-6 ">
+                <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-6">
                     {menus.map((menu) => (
                         <div
                             key={menu.id}
                             onClick={() => handleSelect(menu)}
-                            className={`${menu.bgColor}     group relative rounded-2xl p-6 text-white shadow-2xl hover:shadow-3xl transition-all duration-300 transform hover:-translate-y-2 hover:scale-105 cursor-pointer overflow-hidden`}
-
+                            className={`${menu.bgColor} relative rounded-2xl p-6 text-white shadow-lg cursor-pointer overflow-hidden`}
                         >
                             {/* Highlight on selection */}
                             {selectedMenu === menu.id && (
@@ -43,24 +42,22 @@ const MenuContainer = () => {
                                 </div>
                             )}
 
-                            <div className="absolute inset-0 bg-gradient-to-r from-orange-500/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-
                             <div className="relative z-10 flex flex-col items-center justify-center text-center h-full min-h-[140px]">
-                                <div className="text-5xl mb-3 transform group-hover:scale-110">
+                                <div className="text-5xl mb-4">
                                     {menu.icon}
                                 </div>
 
-                                <div className="relative mb-3">
-                                    <span className="text-4xl font-bold bg-white/20 backdrop-blur-sm px-3 py-1 rounded-full shadow-lg group-hover:bg-orange-500/30 transition-all duration-300">
+                                <div className="mb-4">
+                                    <span className="text-3xl font-bold bg-white/20 backdrop-blur-sm px-4 py-2 rounded-full shadow-lg">
                                         {menu.items.length}
                                     </span>
                                 </div>
 
-                                <h2 className="text-lg font-bold tracking-wide uppercase group-hover:text-orange-100 transition-colors duration-300 drop-shadow-md">
+                                <h2 className="text-lg font-bold tracking-wide uppercase drop-shadow-md mb-2">
                                     {menu.name}
                                 </h2>
 
-                                <p className="text-xs opacity-80 mt-1 group-hover:opacity-100 transition-opacity duration-300">
+                                <p className="text-xs opacity-90">
                                     {menu.items.length === 1 ? "1 Item" : `${menu.items.length} Items`} Available
                                 </p>
                             </div>
@@ -70,34 +67,40 @@ const MenuContainer = () => {
                 <hr className="border border-[#2a2a2a] border-t-2 mt-6 mb-4" />
                 <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-6     ">
                     {selectedMenu?.items?.map((item) => (
-                        <div key={item.id}>
-                            <div className="bg-[#1a1a1a] rounded h-32 p-4 flex       justify-between  text-white">
+                        <div key={item.id} className="bg-[#1a1a1a] rounded-2xl p-6 text-white shadow-lg">
+                            <div className="flex flex-col h-full">
+                                <div className="flex items-center justify-between mb-4">
+                                    <h3 className="text-lg font-semibold text-white leading-tight">{item.name}</h3>
+                                    <Icons.ShoppingCart className="size-10 bg-orange-500/30 p-2 rounded-full text-orange-500 " />
+                                </div>
 
-                                <div className=" flex flex-col justify-between">
-
-                                    <p className=" text-md  whitespace-nowrap">{item.name}</p>
-                                    <div className="mt-2 flex items-center justify-between w-full">
-                                        <span className="text-orange-500 font-semibold">${item.price}</span>
-                                        <div className="flex items-center gap-2">
-                                            <button onClick={() => decrement(item.id)}>
-                                                <Icons.Minus size={18} className="text-orange-500" />
-                                            </button>
-                                            <span className="text-sm w-12 text-center">
-                                                {itemCounts[item.id] || 0} {itemCounts[item.id] === 1 ? "item" : "items"}
-                                            </span>
-                                            <button onClick={() => increment(item.id)}>
-                                                <Icons.Plus size={18} className="text-orange-500" />
-                                            </button>
-                                        </div>
+                                <div className="mt-auto">
+                                    <div className="flex items-center justify-between mb-4">
+                                        <span className="text-2xl font-bold text-orange-500">${item.price}</span>
                                     </div>
 
-
-                                </div>
-                                <div>
-
-
-
-
+                                    <div className="flex items-center justify-center bg-[#2a2a2a] rounded-lg px-4 py-2">
+                                        <button
+                                            onClick={() => decrement(item.id)}
+                                            className="p-2 rounded-full bg-orange-500/20 mr-5    text-orange-500"
+                                        >
+                                            <Icons.Minus size={16} className="cursor-pointer" />
+                                        </button>
+                                        <div className="mx-4 text-center min-w-[80px]">
+                                            <span className="text-lg font-semibold text-white">
+                                                {itemCounts[item.id] || 0}
+                                            </span>
+                                            <p className="text-xs text-gray-400">
+                                                {itemCounts[item.id] === 1 ? "item" : "items"}
+                                            </p>
+                                        </div>
+                                        <button
+                                            onClick={() => increment(item.id)}
+                                            className="p-2 rounded-full cursor-pointer bg-orange-500/20 text-orange-500"
+                                        >
+                                            <Icons.Plus size={16} />
+                                        </button>
+                                    </div>
                                 </div>
                             </div>
                         </div>
